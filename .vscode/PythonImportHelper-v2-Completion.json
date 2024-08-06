@@ -1,0 +1,111 @@
+[
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreate",
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "isExtraImport": true,
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "isExtraImport": true,
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "uvicorn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uvicorn",
+        "description": "uvicorn",
+        "detail": "uvicorn",
+        "documentation": {}
+    },
+    {
+        "label": "users",
+        "importPath": "app.routers",
+        "description": "app.routers",
+        "isExtraImport": true,
+        "detail": "app.routers",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreate",
+        "kind": 6,
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "peekOfCode": "class UserCreate(BaseModel):\n    username: str\n    email: EmailStr\n    password: str\nclass User(BaseModel):\n    id: int\n    username: str\n    email: EmailStr",
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "app.models.user",
+        "description": "app.models.user",
+        "peekOfCode": "class User(BaseModel):\n    id: int\n    username: str\n    email: EmailStr",
+        "detail": "app.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.users",
+        "description": "app.routers.users",
+        "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"users\"])\n@router.post(\"/\", response_model=User)\nasync def create_user(user: UserCreate):\n    # Implement user creation logic\n    pass",
+        "detail": "app.routers.users",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "app = FastAPI()\n@app.on_event(\"startup\")\nasync def startup_event():\n    return {\"message\":\"started...\"}\n# Include routers\napp.include_router(users.router)\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Welcome to the Car Repair Handyman API\"}\nif __name__ == \"__main__\":",
+        "detail": "app.main",
+        "documentation": {}
+    }
+]
