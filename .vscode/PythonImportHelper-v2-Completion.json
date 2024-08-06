@@ -41,18 +41,18 @@
     },
     {
         "label": "UserCreate",
-        "importPath": "app.models.user",
-        "description": "app.models.user",
+        "importPath": "models.user",
+        "description": "models.user",
         "isExtraImport": true,
-        "detail": "app.models.user",
+        "detail": "models.user",
         "documentation": {}
     },
     {
         "label": "User",
-        "importPath": "app.models.user",
-        "description": "app.models.user",
+        "importPath": "models.user",
+        "description": "models.user",
         "isExtraImport": true,
-        "detail": "app.models.user",
+        "detail": "models.user",
         "documentation": {}
     },
     {
@@ -66,10 +66,10 @@
     },
     {
         "label": "users",
-        "importPath": "app.routers",
-        "description": "app.routers",
+        "importPath": "routers",
+        "description": "routers",
         "isExtraImport": true,
-        "detail": "app.routers",
+        "detail": "routers",
         "documentation": {}
     },
     {
@@ -95,7 +95,7 @@
         "kind": 5,
         "importPath": "app.routers.users",
         "description": "app.routers.users",
-        "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"users\"])\n@router.post(\"/\", response_model=User)\nasync def create_user(user: UserCreate):\n    # Implement user creation logic\n    pass",
+        "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"users\"])\n@router.post(\"/\", response_model=User)\nasync def create_user(user: UserCreate):\n    # Implement user creation logic\n    return {\"successful\": user}\n    pass",
         "detail": "app.routers.users",
         "documentation": {}
     },
