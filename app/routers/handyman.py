@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from models import models, schemas
 from database import get_db
+from services import services
 
 router = APIRouter(prefix="/handymen", tags=["handymen"])
 
@@ -19,3 +20,13 @@ async def read_handyman(handyman_id: int, db: Session = Depends(get_db)):
     if db_handyman is None:
         raise HTTPException(status_code=404, detail="Handyman not found")
     return db_handyman
+
+
+@router.get("/nearby_handymen/", response_model=schemas.Handyman)
+def get_nearby_handymen(request_id: int, db: Session = Depends(get_db)):
+    request = db.query(models.ServiceRequest).filter(models.ServiceRequest.id == request_id).first()
+    if not request:
+        raise HTTPException(status_code=404, detail="Request not found")
+
+    nearby_handymen = services.find_nearby_handymen(request, db)
+    return nearby_handymen

@@ -7,7 +7,7 @@ class UserBase(BaseModel):
     username: str
     email: str
     phone:str
-
+    
 class UserCreate(UserBase):
     user_type:Optional[str] = "user"
     password: str
@@ -40,6 +40,8 @@ class ServiceRequestBase(BaseModel):
     car_year: str
     issue_description: str
     location: str
+    latitude:float
+    longitude:float
     status: Optional[str] = "pending"
 
 class ServiceRequestCreate(ServiceRequestBase):

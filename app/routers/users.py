@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from models import models, schemas
 from database import get_db
 from passlib.context import CryptContext
+import bcrypt
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Real-Time Tracking</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  </head>
+  <body>
+    testing....
+    <div id="map" style="height: 500px; width: 100%"></div>
+    <script>
+      let map;
+      let marker;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: -34.397, lng: 150.644 },
+          zoom: 8,
+        });
+        marker = new google.maps.Marker({
+          position: { lat: -34.397, lng: 150.644 },
+          map: map,
+        });
+      }
+
+      function updateMarker(lat, lng) {
+        const newPos = new google.maps.LatLng(lat, lng);
+        marker.setPosition(newPos);
+        map.setCenter(newPos);
+      }
+
+      const ws = new WebSocket("ws://localhost:5000/ws/1");
+
+      ws.onmessage = function (event) {
+        const data = JSON.parse(event.data);
+        updateMarker(data.lat, data.lng);
+      };
+
+      window.onload = initMap;
+    </script>
+  </body>
+</html>

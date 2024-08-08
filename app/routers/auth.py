@@ -13,7 +13,7 @@ import os
 load_dotenv();
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM")
-ACCESS_TOKEN_EXPIRE_MINUTES = os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES")
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES"))
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -33,10 +33,10 @@ def authenticate_user(db, username: str, password: str, user_type: str):
     if user_type == "user":
         
         user = db.query(models.User).filter(models.User.username == username).first()
-        print(user)
+    
     else:
         user = db.query(models.Handyman).filter(models.Handyman.username == username).first()
-        print(user)
+    
     if not user or not verify_password(password, user.hashed_password):
         return False
     return user
