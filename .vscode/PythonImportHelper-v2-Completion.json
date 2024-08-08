@@ -1,5 +1,134 @@
 [
     {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Float",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "database",
+        "description": "database",
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -32,6 +161,14 @@
         "documentation": {}
     },
     {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -40,19 +177,51 @@
         "documentation": {}
     },
     {
-        "label": "UserCreate",
-        "importPath": "models.user",
-        "description": "models.user",
+        "label": "models",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "models.user",
+        "detail": "models",
         "documentation": {}
     },
     {
-        "label": "User",
-        "importPath": "models.user",
-        "description": "models.user",
+        "label": "schemas",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "models.user",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "databases",
+        "description": "databases",
+        "isExtraImport": true,
+        "detail": "databases",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "asynccontextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "users",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
         "documentation": {}
     },
     {
@@ -65,29 +234,66 @@
         "documentation": {}
     },
     {
-        "label": "users",
-        "importPath": "routers",
-        "description": "routers",
-        "isExtraImport": true,
-        "detail": "routers",
+        "label": "User",
+        "kind": 6,
+        "importPath": "app.models.models",
+        "description": "app.models.models",
+        "peekOfCode": "class User(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, index=True)\n    username = Column(String, unique=True, index=True)\n    email = Column(String, unique=True, index=True)\n    hashed_password = Column(String)\nclass Handyman(Base):\n    __tablename__ = \"handymen\"\n    id = Column(Integer, primary_key=True, index=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))",
+        "detail": "app.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Handyman",
+        "kind": 6,
+        "importPath": "app.models.models",
+        "description": "app.models.models",
+        "peekOfCode": "class Handyman(Base):\n    __tablename__ = \"handymen\"\n    id = Column(Integer, primary_key=True, index=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    specialization = Column(String)\n    rating = Column(Float)\n    user = relationship(\"User\")\nclass ServiceRequest(Base):\n    __tablename__ = \"service_requests\"\n    id = Column(Integer, primary_key=True, index=True)",
+        "detail": "app.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceRequest",
+        "kind": 6,
+        "importPath": "app.models.models",
+        "description": "app.models.models",
+        "peekOfCode": "class ServiceRequest(Base):\n    __tablename__ = \"service_requests\"\n    id = Column(Integer, primary_key=True, index=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    handyman_id = Column(Integer, ForeignKey(\"handymen.id\"))\n    description = Column(String)\n    status = Column(String)\n    user = relationship(\"User\")\n    handyman = relationship(\"Handyman\")\nclass Rating(Base):",
+        "detail": "app.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Rating",
+        "kind": 6,
+        "importPath": "app.models.models",
+        "description": "app.models.models",
+        "peekOfCode": "class Rating(Base):\n    __tablename__ = \"ratings\"\n    id = Column(Integer, primary_key=True, index=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    handyman_id = Column(Integer, ForeignKey(\"handymen.id\"))\n    service_request_id = Column(Integer, ForeignKey(\"service_requests.id\"))\n    rating = Column(Float)\n    timestamp = Column(DateTime(timezone=True), server_default=func.now())\n    user = relationship(\"User\")\n    handyman = relationship(\"Handyman\")",
+        "detail": "app.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserBase",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class UserBase(BaseModel):\n    username: str\n    email: EmailStr\nclass UserCreate(UserBase):\n    password: str\nclass User(UserBase):\n    id: int\n    class Config:\n        from_attributes = True\n# Add similar schemas for Handyman and ServiceRequest",
+        "detail": "app.models.schemas",
         "documentation": {}
     },
     {
         "label": "UserCreate",
         "kind": 6,
-        "importPath": "app.models.user",
-        "description": "app.models.user",
-        "peekOfCode": "class UserCreate(BaseModel):\n    username: str\n    email: EmailStr\n    password: str\nclass User(BaseModel):\n    id: int\n    username: str\n    email: EmailStr",
-        "detail": "app.models.user",
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class UserCreate(UserBase):\n    password: str\nclass User(UserBase):\n    id: int\n    class Config:\n        from_attributes = True\n# Add similar schemas for Handyman and ServiceRequest",
+        "detail": "app.models.schemas",
         "documentation": {}
     },
     {
         "label": "User",
         "kind": 6,
-        "importPath": "app.models.user",
-        "description": "app.models.user",
-        "peekOfCode": "class User(BaseModel):\n    id: int\n    username: str\n    email: EmailStr",
-        "detail": "app.models.user",
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class User(UserBase):\n    id: int\n    class Config:\n        from_attributes = True\n# Add similar schemas for Handyman and ServiceRequest",
+        "detail": "app.models.schemas",
         "documentation": {}
     },
     {
@@ -95,8 +301,53 @@
         "kind": 5,
         "importPath": "app.routers.users",
         "description": "app.routers.users",
-        "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"users\"])\n@router.post(\"/\", response_model=User)\nasync def create_user(user: UserCreate):\n    # Implement user creation logic\n    return {\"successful\": user}\n    pass",
+        "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"users\"])\n@router.post(\"/\", response_model=schemas.User)\nasync def create_user(user: schemas.UserCreate):\n    query = models.User.__table__.insert().values(**user.dict())\n    last_record_id = await database.execute(query)\n    return {**user.dict(), \"id\": last_record_id}\n@router.get(\"/{user_id}\", response_model=schemas.User)\nasync def read_user(user_id: int):\n    query = models.User.__table__.select().where(models.User.id == user_id)\n    return await database.fetch_one(query)",
         "detail": "app.routers.users",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_URL",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "DATABASE_URL = \"sqlite:///./test.db\"\ndatabase = Database(DATABASE_URL)\nmetadata = MetaData()\nengine = create_engine(\n    DATABASE_URL, connect_args={\"check_same_thread\": False}\n)\nBase = declarative_base()",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "database = Database(DATABASE_URL)\nmetadata = MetaData()\nengine = create_engine(\n    DATABASE_URL, connect_args={\"check_same_thread\": False}\n)\nBase = declarative_base()",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "metadata",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "metadata = MetaData()\nengine = create_engine(\n    DATABASE_URL, connect_args={\"check_same_thread\": False}\n)\nBase = declarative_base()",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "engine = create_engine(\n    DATABASE_URL, connect_args={\"check_same_thread\": False}\n)\nBase = declarative_base()",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "Base = declarative_base()",
+        "detail": "app.database",
         "documentation": {}
     },
     {
@@ -104,7 +355,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\n@app.on_event(\"startup\")\nasync def startup_event():\n    return {\"message\":\"started...\"}\n# Include routers\napp.include_router(users.router)\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Welcome to the Car Repair Handyman API\"}\nif __name__ == \"__main__\":",
+        "peekOfCode": "app = FastAPI(lifespan=lifespan)\napp.include_router(users.router)\n# app.include_router(handymen.router)\n# app.include_router(service_requests.router)\n# app.include_router(payments.router)\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Welcome to the Car Repair Handyman API\"}\nif __name__ == \"__main__\":\n uvicorn.run(\"main:app\", host=\"127.0.0.1\", port=8000, reload=True)",
         "detail": "app.main",
         "documentation": {}
     }
