@@ -53,9 +53,7 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
 
 @router.post("/login", response_model=schemas.Token)
 async def login_for_access_token(db: Session = Depends(get_db), form_data: OAuth2PasswordRequestForm = Depends()):
-    user_type = form_data.scopes[0] if form_data.scopes else "user"
-    
-    print(form_data.username, form_data.password)
+    user_type = "Handyman" if form_data.scopes and form_data.scopes[0] == "Handyman" else "user"
     
     user = authenticate_user(db, form_data.username, form_data.password, user_type)
     if not user:
@@ -65,23 +63,22 @@ async def login_for_access_token(db: Session = Depends(get_db), form_data: OAuth
             headers={"WWW-Authenticate": "Bearer"},
         )
     access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-    access_token = create_access_token(data={"sub": user.email, "user_type": user_type}, expires_delta=access_token_expires)
-    return {"access_token": access_token, "token_type": "bearer"}
+    access_token = create_access_token(data={"sub": user.username, "user_type": user_type}, expires_delta=access_token_expires)
+    return {"access_token": access_token, "token_type": "bearer", "user_type": user.user_type, "user":user}
 
-@router.get("/users/me", response_model=schemas.User)
+@router.get("/me", response_model=schemas.User)
 async def read_users_me(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
-    credentials_exception = HTTPException(
-        status_code=401,
-        detail="Could not validate credentials",
-        headers={"WWW-Authenticate": "Bearer"},
-    )
+    print(f"Received token: {token}")
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        print(f"Decoded payload: {payload}")
         username: str = payload.get("sub")
         user_type: str = payload.get("user_type")
+        print(f"Username: {username}, User Type: {user_type}")
         if username is None or user_type is None:
             raise credentials_exception
-    except JWTError:
+    except JWTError as e:
+        print(f"JWT Error: {str(e)}")
         raise credentials_exception
     
     if user_type == "user":
@@ -89,6 +86,7 @@ async def read_users_me(token: str = Depends(oauth2_scheme), db: Session = Depen
     else:
         user = db.query(models.Handyman).filter(models.Handyman.username == username).first()
     
+    print(f"Found user: {user}")
     if user is None:
         raise credentials_exception
     return user

@@ -19,7 +19,8 @@ class User(UserBase):
         from_attributes = True
 
 class HandymanBase(UserBase):
-
+    latitude:Optional[int] = None
+    longitude:Optional[int] = None
     specialization: str
     rating: Optional[float] = None
 
@@ -72,7 +73,9 @@ class Payment(PaymentBase):
 class Token(BaseModel):
     access_token: str
     token_type: str
-    user:Optional["User"] or None = None
+    user:Optional["User"]
+    user_type:Optional[str]
+
 
 # class TokenData(BaseModel):
 #     user:Optional["User"] or None = None

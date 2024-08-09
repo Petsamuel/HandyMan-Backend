@@ -35,18 +35,6 @@ async def root():
 
 
 
-@app.websocket("/ws/{user_id}")
-async def websocket_endpoint(websocket: WebSocket, user_id: str):
-    await websocket.accept()
-    await websocket.send_text("WebSocket connected")
-    try:
-        while True:
-            data = await websocket.receive_text()
-            # Broadcast location data to other users
-            await websocket.send_text(f"Message text was: {data}")
-    except WebSocketDisconnect:
-        print(f"Client {user_id} disconnected")
-
 
 app.include_router(auth.router)
 app.include_router(users.router)

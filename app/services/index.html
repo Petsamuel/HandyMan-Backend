@@ -1,41 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Real-Time Tracking</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map with Routing and Popups</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@latest/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+    />
+    <script src="https://unpkg.com/leaflet@latest/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <style>
+      #map {
+        height: 600px;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
-    testing....
-    <div id="map" style="height: 500px; width: 100%"></div>
+    <div id="map"></div>
     <script>
-      let map;
-      let marker;
+      // Initialize the map
+      const map = L.map("map").setView([51.505, -0.09], 13); // Replace with initial coordinates
 
-      function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: -34.397, lng: 150.644 },
-          zoom: 8,
-        });
-        marker = new google.maps.Marker({
-          position: { lat: -34.397, lng: 150.644 },
-          map: map,
-        });
+      // Add OpenStreetMap tile layer
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+      }).addTo(map);
+
+      // Define the service request location (replace with actual coordinates)
+      const serviceRequestLocation = { lat: 6.52438, lng: 3.37921 }; // Example coordinates
+
+      // Marker for the handyman's location
+      const handymanMarker = L.marker([51.505, -0.09])
+        .addTo(map)
+        .bindPopup("<b>Handyman's Current Location</b>")
+        .openPopup();
+
+      // Marker for the service request location
+      const serviceRequestMarker = L.marker([
+        serviceRequestLocation.lat,
+        serviceRequestLocation.lng,
+      ])
+        .addTo(map)
+        .bindPopup("<b>Service Request Location</b><br>Waiting for Handyman...")
+        .openPopup();
+
+      // Initialize the routing control
+      let routingControl;
+
+      // Function to update handyman's location and routing
+      function updateLocation(lat, lng) {
+        handymanMarker.setLatLng([lat, lng]);
+        map.setView([lat, lng]); // Center the map on the handyman's location
+
+        // Update the route
+        if (routingControl) {
+          map.removeControl(routingControl);
+        }
+
+        routingControl = L.Routing.control({
+          waypoints: [
+            L.latLng(lat, lng),
+            L.latLng(serviceRequestLocation.lat, serviceRequestLocation.lng),
+          ],
+          routeWhileDragging: true,
+          showAlternatives: true,
+          altLineOptions: {
+            styles: [
+              { color: "black", opacity: 0.15, weight: 9 },
+              { color: "white", opacity: 0.8, weight: 6 },
+              { color: "blue", opacity: 0.5, weight: 2 },
+            ],
+          },
+        })
+          .on("routesfound", function (e) {
+            const routes = e.routes;
+            const summary = routes[0].summary;
+            const distance = (summary.totalDistance / 1000).toFixed(2); // in km
+            const time = (summary.totalTime / 60).toFixed(2); // in minutes
+
+            handymanMarker.setPopupContent(
+              `<b>Handyman's Current Location</b><br>Distance to Service Location: ${distance} km<br>Estimated Time: ${time} mins`
+            );
+            serviceRequestMarker.setPopupContent(
+              `<b>Service Request Location</b><br>Distance from Handyman: ${distance} km<br>Estimated Time: ${time} mins`
+            );
+
+            // Automatically open the updated popups
+            handymanMarker.openPopup();
+            serviceRequestMarker.openPopup();
+          })
+          .addTo(map);
       }
 
-      function updateMarker(lat, lng) {
-        const newPos = new google.maps.LatLng(lat, lng);
-        marker.setPosition(newPos);
-        map.setCenter(newPos);
+      // Watch for the handyman's location
+      if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(
+          (position) => {
+            const data = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude,
+            };
+            updateLocation(data.lat, data.lng);
+          },
+          (error) => {
+            console.error("Error getting location: ", error);
+          }
+        );
+      } else {
+        console.error("Geolocation is not supported by this browser.");
       }
 
-      const ws = new WebSocket("ws://localhost:5000/ws/1");
+      // Optional: Calculate and display distance
+      function calculateDistance(lat1, lon1, lat2, lon2) {
+        const R = 6371; // Radius of the Earth in km
+        const dLat = (lat2 - lat1) * (Math.PI / 180);
+        const dLon = (lon2 - lon1) * (Math.PI / 180);
+        const a =
+          Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+          Math.cos(lat1 * (Math.PI / 180)) *
+            Math.cos(lat2 * (Math.PI / 180)) *
+            Math.sin(dLon / 2) *
+            Math.sin(dLon / 2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        const distance = R * c; // Distance in km
+        return distance;
+      }
 
-      ws.onmessage = function (event) {
-        const data = JSON.parse(event.data);
-        updateMarker(data.lat, data.lng);
-      };
-
-      window.onload = initMap;
+      // Example usage to display distance
+      setInterval(() => {
+        const distance = calculateDistance(
+          handymanMarker.getLatLng().lat,
+          handymanMarker.getLatLng().lng,
+          serviceRequestLocation.lat,
+          serviceRequestLocation.lng
+        );
+        console.log(`Distance to service request: ${distance.toFixed(2)} km`);
+      }, 5000);
     </script>
   </body>
 </html>

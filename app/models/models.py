@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, ForeignKey, DateTime
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, DateTime, func
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -46,6 +46,8 @@ class ServiceRequest(Base):
     location = Column(String)
     latitude=Column(Float)
     longitude=Column(Float)
+    created_at = Column(DateTime, default=func.now())
+    updated_at = Column(DateTime, default=func.now())
     status = Column(String, default="pending")
     user = relationship("User", back_populates="service_requests")
     handyman = relationship("Handyman", back_populates="service_requests")
