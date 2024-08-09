@@ -1,39 +1,52 @@
-from pydantic import BaseModel
-from typing import Optional
+from pydantic import BaseModel, EmailStr, constr, validator, Field
+from typing import Optional, List
+from enum import Enum
+
+class UserType(str, Enum):
+    USER = "user"
+    HANDYMAN = "handyman"
+
+class ServiceStatus(str, Enum):
+    PENDING = "pending"
+    IN_PROGRESS = "in_progress"
+    COMPLETED = "completed"
+    CANCELLED = "cancelled"
 
 class UserBase(BaseModel):
-    first_name:str
-    last_name:str
+    first_name: str
+    last_name: str
     username: str
-    email: str
-    phone:str
-    
+    email: EmailStr  
+    phone: constr(min_length=10, max_length=15) = Field(..., pattern=r'^\+?\d{10,15}$')
+
 class UserCreate(UserBase):
-    user_type:Optional[str] = "user"
+    user_type: Optional[UserType] = UserType.USER
     password: str
 
 class User(UserBase):
     id: int
 
     class Config:
-        from_attributes = True
+        form_attributes = True  # Use form_attributes for SQLAlchemy integration
 
 class HandymanBase(UserBase):
-    latitude:Optional[int] = None
-    longitude:Optional[int] = None
+    latitude: Optional[float] = None  # Use float for latitude/longitude
+    longitude: Optional[float] = None
     specialization: str
     rating: Optional[float] = None
 
 class HandymanCreate(HandymanBase):
-    user_type:Optional[str] = "handyman"
+    user_type: Optional[UserType] = UserType.HANDYMAN
     password: str
 
 class Handyman(HandymanBase):
     id: int
 
     class Config:
-        from_attributes = True
-
+        form_attributes = True
+        
+class UpdateServiceStatusRequest(BaseModel):
+    status: str
 class ServiceRequestBase(BaseModel):
     user_id: int
     car_make: str
@@ -41,9 +54,9 @@ class ServiceRequestBase(BaseModel):
     car_year: str
     issue_description: str
     location: str
-    latitude:float
-    longitude:float
-    status: Optional[str] = "pending"
+    latitude: float
+    longitude: float
+    status: Optional[ServiceStatus] = ServiceStatus.PENDING
 
 class ServiceRequestCreate(ServiceRequestBase):
     pass
@@ -53,7 +66,7 @@ class ServiceRequest(ServiceRequestBase):
     handyman_id: Optional[int] = None
 
     class Config:
-        from_attributes = True
+        form_attributes = True
 
 class PaymentBase(BaseModel):
     user_id: int
@@ -68,14 +81,24 @@ class Payment(PaymentBase):
     id: int
 
     class Config:
-        from_attributes = True
+        form_attributes = True
 
 class Token(BaseModel):
     access_token: str
     token_type: str
-    user:Optional["User"]
-    user_type:Optional[str]
+    user: Optional[User]  # Ensure User is defined before this line
+    user_type: Optional[UserType]
 
+    class Config:
+        form_attributes = True
 
-# class TokenData(BaseModel):
-#     user:Optional["User"] or None = None
+class Rating(BaseModel):
+    user_id: str
+    rating: int
+    comments: str
+    service_id: int
+
+class CompleteServiceRequest(BaseModel):
+    handyman_id: str
+    end_time: str
+    final_cost: float

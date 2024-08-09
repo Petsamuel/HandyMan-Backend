@@ -66,3 +66,71 @@ async def decline_request(request_id:int, current_user: models.User = Depends(au
     
     return {"status":"Service request declined", "request_id":request_id}
 
+@router.post("/service/{service_id}/feedback")
+async def submit_feedback(service_id: int, request: schemas.Rating, db: Session = Depends(get_db)):
+    service_request = db.query(models.ServiceRequest).filter(models.ServiceRequest.id == service_id).first()
+    
+    if not service_request:
+        raise HTTPException(status_code=404, detail="Service request not found")
+
+    # Save feedback to the database (assuming you have a Feedback model)
+    feedback = models.Rating(
+        service_request_id=service_id,
+        user_id=request.user_id,
+        rating=request.rating,
+        comments=request.comments
+    )
+    db.add(feedback)
+    db.commit()
+    
+    return {
+        "status": "Feedback submitted",
+        "service_id": service_id,
+        "user_id": request.user_id,
+        "rating": request.rating,
+        "comments": request.comments
+    }
+    
+
+
+@router.patch("/service/{service_id}/status")
+async def update_service_status(service_id: int, current_user: models.User = Depends(auth.read_users_me), request: model.UpdateServiceStatusRequest, db: Session = Depends(get_db)):
+    service_request = db.query(models.ServiceRequest).filter(models.ServiceRequest.id == service_id).first()
+    
+    if not service_request:
+        raise HTTPException(status_code=404, detail="Service request not found")
+
+    # Update the service status
+    service_request.status = request.status
+    db.commit()
+    
+    return {
+        "status": "Service status updated",
+        "service_id": service_id,
+        "new_status": request.status
+    }
+
+
+
+
+@router.post("/service/{service_id}/complete")
+async def complete_service(service_id: int, request: models.CompleteServiceRequest, db: Session = Depends(get_db)):
+    service_request = db.query(models.ServiceRequest).filter(models.ServiceRequest.id == service_id).first()
+    
+    if not service_request:
+        raise HTTPException(status_code=404, detail="Service request not found")
+
+    # Update the service status to "completed"
+    service_request.status = "completed"
+    service_request.end_time = request.end_time
+    service_request.final_cost = request.final_cost
+
+    db.commit()
+    
+    return {
+        "status": "Service completed",
+        "service_id": service_id,
+        "handyman_id": request.handyman_id,
+        "end_time": request.end_time,
+        "final_cost": request.final_cost
+    }
