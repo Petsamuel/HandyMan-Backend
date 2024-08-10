@@ -94,7 +94,7 @@ async def submit_feedback(service_id: int, request: schemas.Rating, db: Session 
 
 
 @router.patch("/service/{service_id}/status")
-async def update_service_status(service_id: int, current_user: models.User = Depends(auth.read_users_me), request: model.UpdateServiceStatusRequest, db: Session = Depends(get_db)):
+async def update_service_status(service_id: int, request: schemas.UpdateServiceStatusRequest, current_user: models.User = Depends(auth.read_users_me), db: Session = Depends(get_db)):
     service_request = db.query(models.ServiceRequest).filter(models.ServiceRequest.id == service_id).first()
     
     if not service_request:
@@ -114,7 +114,7 @@ async def update_service_status(service_id: int, current_user: models.User = Dep
 
 
 @router.post("/service/{service_id}/complete")
-async def complete_service(service_id: int, request: models.CompleteServiceRequest, db: Session = Depends(get_db)):
+async def complete_service(service_id: int, request: schemas.CompleteServiceRequest, db: Session = Depends(get_db)):
     service_request = db.query(models.ServiceRequest).filter(models.ServiceRequest.id == service_id).first()
     
     if not service_request:
