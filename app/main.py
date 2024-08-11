@@ -7,6 +7,7 @@ import websockets
 from database import engine, database
 from routers import users,auth,handyman, service, request, payment
 from fastapi.responses import HTMLResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 
 
@@ -29,6 +30,15 @@ async def lifespan(app: FastAPI):
     
 
 app = FastAPI(lifespan=lifespan)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],   
+    allow_headers=["*"],   
+)
+
+
 @app.get("/")
 async def root():
     return {"message": "Welcome to the Car Repair Handyman API "}
