@@ -5,7 +5,7 @@ import uvicorn
 import subprocess
 import websockets
 from database import engine, database
-from routers import users,auth,handyman, serviceRequest, payment
+from routers import users,auth,handyman, service, request, payment
 from fastapi.responses import HTMLResponse
 
 
@@ -39,8 +39,10 @@ async def root():
 app.include_router(auth.router)
 app.include_router(users.router)
 app.include_router(handyman.router)
-app.include_router(serviceRequest.router)
+app.include_router(request.router)
+app.include_router(service.router)
 app.include_router(payment.router)
+
 
 
 if __name__ == "__main__":
