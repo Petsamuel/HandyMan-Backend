@@ -5,8 +5,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv();
 
-SQLALCHEMY_DATABASE_URL = os.getenv("SQLALCHEMY_DATABASE_URL", "POSTGRES_URL")
-DATABASE_URL = SQLALCHEMY_DATABASE_URL
+DATABASE_URL = os.getenv("DATABASE_URL")
 database = Database(DATABASE_URL)
 metadata = MetaData()
 engine = create_engine(
