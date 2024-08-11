@@ -5,7 +5,8 @@ import os
 from dotenv import load_dotenv
 load_dotenv();
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+
+DATABASE_URL = "postgresql://postgres:root@localhost:5432/handyman"
 database = Database(DATABASE_URL)
 metadata = MetaData()
 engine = create_engine(
