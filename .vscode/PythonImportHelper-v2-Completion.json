@@ -1,5 +1,142 @@
 [
     {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "sqlalchemy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "engine_from_config",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "pool",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "Column",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -48,6 +185,14 @@
         "documentation": {}
     },
     {
+        "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "create_engine",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -61,6 +206,48 @@
         "description": "sqlalchemy",
         "isExtraImport": true,
         "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "fileConfig",
+        "importPath": "logging.config",
+        "description": "logging.config",
+        "isExtraImport": true,
+        "detail": "logging.config",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models.models",
+        "description": "models.models",
+        "isExtraImport": true,
+        "detail": "models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "models.models",
+        "description": "models.models",
+        "isExtraImport": true,
+        "detail": "models.models",
         "documentation": {}
     },
     {
@@ -80,52 +267,83 @@
         "documentation": {}
     },
     {
-        "label": "func",
-        "importPath": "sqlalchemy.sql",
-        "description": "sqlalchemy.sql",
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
         "isExtraImport": true,
-        "detail": "sqlalchemy.sql",
+        "detail": "sqlalchemy.orm",
         "documentation": {}
     },
     {
-        "label": "database",
-        "kind": 6,
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
         "isExtraImport": true,
-        "importPath": "database",
-        "description": "database",
-        "detail": "database",
+        "detail": "sqlalchemy.orm",
         "documentation": {}
     },
     {
-        "label": "Base",
-        "importPath": "database",
-        "description": "database",
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "sqlalchemy.orm",
         "documentation": {}
     },
     {
-        "label": "engine",
-        "importPath": "database",
-        "description": "database",
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "sqlalchemy.orm",
         "documentation": {}
     },
     {
-        "label": "database",
-        "importPath": "database",
-        "description": "database",
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "sqlalchemy.orm",
         "documentation": {}
     },
     {
-        "label": "Base",
-        "importPath": "database",
-        "description": "database",
+        "label": "Session",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
         "documentation": {}
     },
     {
@@ -142,6 +360,174 @@
         "description": "pydantic",
         "isExtraImport": true,
         "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "constr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
         "documentation": {}
     },
     {
@@ -177,6 +563,78 @@
         "documentation": {}
     },
     {
+        "label": "WebSocket",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "WebSocketDisconnect",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth2PasswordBearer",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "OAuth2PasswordRequestForm",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
+        "isExtraImport": true,
+        "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "CryptContext",
+        "importPath": "passlib.context",
+        "description": "passlib.context",
+        "isExtraImport": true,
+        "detail": "passlib.context",
+        "documentation": {}
+    },
+    {
+        "label": "CryptContext",
+        "importPath": "passlib.context",
+        "description": "passlib.context",
+        "isExtraImport": true,
+        "detail": "passlib.context",
+        "documentation": {}
+    },
+    {
+        "label": "CryptContext",
+        "importPath": "passlib.context",
+        "description": "passlib.context",
+        "isExtraImport": true,
+        "detail": "passlib.context",
+        "documentation": {}
+    },
+    {
+        "label": "CryptContext",
+        "importPath": "passlib.context",
+        "description": "passlib.context",
+        "isExtraImport": true,
+        "detail": "passlib.context",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "models",
         "description": "models",
@@ -193,27 +651,285 @@
         "documentation": {}
     },
     {
-        "label": "Database",
-        "importPath": "databases",
-        "description": "databases",
+        "label": "models",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "databases",
+        "detail": "models",
         "documentation": {}
     },
     {
-        "label": "declarative_base",
-        "importPath": "sqlalchemy.ext.declarative",
-        "description": "sqlalchemy.ext.declarative",
+        "label": "schemas",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "sqlalchemy.ext.declarative",
+        "detail": "models",
         "documentation": {}
     },
     {
-        "label": "asynccontextmanager",
-        "importPath": "contextlib",
-        "description": "contextlib",
+        "label": "models",
+        "importPath": "models",
+        "description": "models",
         "isExtraImport": true,
-        "detail": "contextlib",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "schemas",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "schemas",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "schemas",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "schemas",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "schemas",
+        "importPath": "models",
+        "description": "models",
+        "isExtraImport": true,
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "JWTError",
+        "importPath": "jose",
+        "description": "jose",
+        "isExtraImport": true,
+        "detail": "jose",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "importPath": "jose",
+        "description": "jose",
+        "isExtraImport": true,
+        "detail": "jose",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "services",
+        "importPath": "services",
+        "description": "services",
+        "isExtraImport": true,
+        "detail": "services",
+        "documentation": {}
+    },
+    {
+        "label": "services",
+        "importPath": "services",
+        "description": "services",
+        "isExtraImport": true,
+        "detail": "services",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "bcrypt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "bcrypt",
+        "description": "bcrypt",
+        "detail": "bcrypt",
+        "documentation": {}
+    },
+    {
+        "label": "geodesic",
+        "importPath": "geopy.distance",
+        "description": "geopy.distance",
+        "isExtraImport": true,
+        "detail": "geopy.distance",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
         "documentation": {}
     },
     {
@@ -222,6 +938,71 @@
         "description": "routers",
         "isExtraImport": true,
         "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "handyman",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "service",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "payment",
+        "importPath": "routers",
+        "description": "routers",
+        "isExtraImport": true,
+        "detail": "routers",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "databases",
+        "description": "databases",
+        "isExtraImport": true,
+        "detail": "databases",
+        "documentation": {}
+    },
+    {
+        "label": "asynccontextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
         "documentation": {}
     },
     {
@@ -234,11 +1015,126 @@
         "documentation": {}
     },
     {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "HTMLResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "app.alembic.versions.7c51517ebc62_migration_for_postgress",
+        "description": "app.alembic.versions.7c51517ebc62_migration_for_postgress",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table('handymen',\n    sa.Column('id', sa.Integer(), nullable=False),\n    sa.Column('first_name', sa.String(), nullable=True),\n    sa.Column('last_name', sa.String(), nullable=True),\n    sa.Column('username', sa.String(), nullable=True),\n    sa.Column('email', sa.String(), nullable=True),\n    sa.Column('phone', sa.String(), nullable=True),\n    sa.Column('latitude', sa.Float(), nullable=True),",
+        "detail": "app.alembic.versions.7c51517ebc62_migration_for_postgress",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "app.alembic.versions.7c51517ebc62_migration_for_postgress",
+        "description": "app.alembic.versions.7c51517ebc62_migration_for_postgress",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_index(op.f('ix_ratings_id'), table_name='ratings')\n    op.drop_table('ratings')\n    op.drop_index(op.f('ix_payments_id'), table_name='payments')\n    op.drop_table('payments')\n    op.drop_index(op.f('ix_service_requests_id'), table_name='service_requests')\n    op.drop_table('service_requests')\n    op.drop_index(op.f('ix_users_username'), table_name='users')\n    op.drop_index(op.f('ix_users_phone'), table_name='users')",
+        "detail": "app.alembic.versions.7c51517ebc62_migration_for_postgress",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "app.alembic.versions.8dde29a6973b_migration_for_postgress",
+        "description": "app.alembic.versions.8dde29a6973b_migration_for_postgress",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
+        "detail": "app.alembic.versions.8dde29a6973b_migration_for_postgress",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "app.alembic.versions.8dde29a6973b_migration_for_postgress",
+        "description": "app.alembic.versions.8dde29a6973b_migration_for_postgress",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    pass\n    # ### end Alembic commands ###",
+        "detail": "app.alembic.versions.8dde29a6973b_migration_for_postgress",
+        "documentation": {}
+    },
+    {
+        "label": "run_migrations_offline",
+        "kind": 2,
+        "importPath": "app.alembic.env",
+        "description": "app.alembic.env",
+        "peekOfCode": "def run_migrations_offline() -> None:\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation\n    we don't even need a DBAPI to be available.\n    Calls to context.execute() here emit the given string to the\n    script output.\n    \"\"\"\n    url = config.get_main_option(\"sqlalchemy.url\")",
+        "detail": "app.alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "run_migrations_online",
+        "kind": 2,
+        "importPath": "app.alembic.env",
+        "description": "app.alembic.env",
+        "peekOfCode": "def run_migrations_online() -> None:\n    \"\"\"Run migrations in 'online' mode.\n    In this scenario we need to create an Engine\n    and associate a connection with the context.\n    \"\"\"\n    connectable = engine_from_config(\n        config.get_section(config.config_ini_section, {}),\n        prefix=\"sqlalchemy.\",\n        poolclass=pool.NullPool,\n    )",
+        "detail": "app.alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 5,
+        "importPath": "app.alembic.env",
+        "description": "app.alembic.env",
+        "peekOfCode": "config = context.config\n# Interpret the config file for Python logging.\n# This line sets up loggers basically.\nif config.config_file_name is not None:\n    fileConfig(config.config_file_name)\n# add your model's MetaData object here\n# for 'autogenerate' support\n# from myapp import mymodel\n# target_metadata = mymodel.Base.metadata\ntarget_metadata = Base.metadata",
+        "detail": "app.alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "target_metadata",
+        "kind": 5,
+        "importPath": "app.alembic.env",
+        "description": "app.alembic.env",
+        "peekOfCode": "target_metadata = Base.metadata\n# other values from the config, defined by the needs of env.py,\n# can be acquired:\n# my_important_option = config.get_main_option(\"my_important_option\")\n# ... etc.\ndef run_migrations_offline() -> None:\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation",
+        "detail": "app.alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "UserType",
+        "kind": 6,
+        "importPath": "app.models.models",
+        "description": "app.models.models",
+        "peekOfCode": "class UserType(str, Enum):\n    USER = \"user\"\n    HANDYMAN = \"handyman\"\nclass ServiceStatus(str, Enum):\n    PENDING = \"pending\"\n    IN_PROGRESS = \"in_progress\"\n    COMPLETED = \"completed\"\n    CANCELLED = \"cancelled\"\nclass User(Base):\n    __tablename__ = \"users\"",
+        "detail": "app.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceStatus",
+        "kind": 6,
+        "importPath": "app.models.models",
+        "description": "app.models.models",
+        "peekOfCode": "class ServiceStatus(str, Enum):\n    PENDING = \"pending\"\n    IN_PROGRESS = \"in_progress\"\n    COMPLETED = \"completed\"\n    CANCELLED = \"cancelled\"\nclass User(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, index=True)\n    first_name = Column(String, index=True)\n    last_name = Column(String, index=True)",
+        "detail": "app.models.models",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "kind": 6,
         "importPath": "app.models.models",
         "description": "app.models.models",
-        "peekOfCode": "class User(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, index=True)\n    username = Column(String, unique=True, index=True)\n    email = Column(String, unique=True, index=True)\n    hashed_password = Column(String)\nclass Handyman(Base):\n    __tablename__ = \"handymen\"\n    id = Column(Integer, primary_key=True, index=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))",
+        "peekOfCode": "class User(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, index=True)\n    first_name = Column(String, index=True)\n    last_name = Column(String, index=True)\n    username = Column(String, index=True)\n    email = Column(String, unique=True, index=True)\n    phone = Column(String, unique=True, index=True)\n    user_type = Column(String, default=UserType.USER.value)\n    hashed_password = Column(String)",
         "detail": "app.models.models",
         "documentation": {}
     },
@@ -247,7 +1143,7 @@
         "kind": 6,
         "importPath": "app.models.models",
         "description": "app.models.models",
-        "peekOfCode": "class Handyman(Base):\n    __tablename__ = \"handymen\"\n    id = Column(Integer, primary_key=True, index=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    specialization = Column(String)\n    rating = Column(Float)\n    user = relationship(\"User\")\nclass ServiceRequest(Base):\n    __tablename__ = \"service_requests\"\n    id = Column(Integer, primary_key=True, index=True)",
+        "peekOfCode": "class Handyman(Base):\n    __tablename__ = \"handymen\"\n    id = Column(Integer, primary_key=True, index=True)\n    first_name = Column(String, index=True)\n    last_name = Column(String, index=True)\n    username = Column(String, index=True)\n    email = Column(String, unique=True, index=True)\n    phone = Column(String, unique=True, index=True)\n    latitude = Column(Float)\n    longitude = Column(Float)",
         "detail": "app.models.models",
         "documentation": {}
     },
@@ -256,7 +1152,7 @@
         "kind": 6,
         "importPath": "app.models.models",
         "description": "app.models.models",
-        "peekOfCode": "class ServiceRequest(Base):\n    __tablename__ = \"service_requests\"\n    id = Column(Integer, primary_key=True, index=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    handyman_id = Column(Integer, ForeignKey(\"handymen.id\"))\n    description = Column(String)\n    status = Column(String)\n    user = relationship(\"User\")\n    handyman = relationship(\"Handyman\")\nclass Rating(Base):",
+        "peekOfCode": "class ServiceRequest(Base):\n    __tablename__ = \"service_requests\"\n    id = Column(Integer, primary_key=True, index=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    handyman_id = Column(Integer, ForeignKey(\"handymen.id\"), nullable=True)\n    car_make = Column(String)\n    car_model = Column(String)\n    car_year = Column(String)\n    issue_description = Column(String)\n    location = Column(String)",
         "detail": "app.models.models",
         "documentation": {}
     },
@@ -265,8 +1161,44 @@
         "kind": 6,
         "importPath": "app.models.models",
         "description": "app.models.models",
-        "peekOfCode": "class Rating(Base):\n    __tablename__ = \"ratings\"\n    id = Column(Integer, primary_key=True, index=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    handyman_id = Column(Integer, ForeignKey(\"handymen.id\"))\n    service_request_id = Column(Integer, ForeignKey(\"service_requests.id\"))\n    rating = Column(Float)\n    timestamp = Column(DateTime(timezone=True), server_default=func.now())\n    user = relationship(\"User\")\n    handyman = relationship(\"Handyman\")",
+        "peekOfCode": "class Rating(Base):\n    __tablename__ = \"ratings\"\n    id = Column(Integer, primary_key=True, index=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    handyman_id = Column(Integer, ForeignKey(\"handymen.id\"))\n    service_request_id = Column(Integer, ForeignKey(\"service_requests.id\"))\n    rating = Column(Float)\n    comments = Column(String)\n    created_at = Column(DateTime, default=func.now())\n    # Relationships",
         "detail": "app.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "kind": 6,
+        "importPath": "app.models.models",
+        "description": "app.models.models",
+        "peekOfCode": "class Payment(Base):\n    __tablename__ = \"payments\"\n    id = Column(Integer, primary_key=True, index=True)\n    user_id = Column(Integer, ForeignKey(\"users.id\"))\n    service_request_id = Column(Integer, ForeignKey(\"service_requests.id\"))\n    amount = Column(Float)\n    status = Column(String, default=\"pending\")\n    timestamp = Column(DateTime, default=func.now())  # Default to current time\n    # Relationships\n    user = relationship(\"User\")",
+        "detail": "app.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "app.models.models",
+        "description": "app.models.models",
+        "peekOfCode": "Base = declarative_base()\nclass UserType(str, Enum):\n    USER = \"user\"\n    HANDYMAN = \"handyman\"\nclass ServiceStatus(str, Enum):\n    PENDING = \"pending\"\n    IN_PROGRESS = \"in_progress\"\n    COMPLETED = \"completed\"\n    CANCELLED = \"cancelled\"\nclass User(Base):",
+        "detail": "app.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserType",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class UserType(str, Enum):\n    USER = \"user\"\n    HANDYMAN = \"handyman\"\nclass ServiceStatus(str, Enum):\n    PENDING = \"pending\"\n    IN_PROGRESS = \"in_progress\"\n    COMPLETED = \"completed\"\n    CANCELLED = \"cancelled\"\nclass UserBase(BaseModel):\n    first_name: str",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceStatus",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class ServiceStatus(str, Enum):\n    PENDING = \"pending\"\n    IN_PROGRESS = \"in_progress\"\n    COMPLETED = \"completed\"\n    CANCELLED = \"cancelled\"\nclass UserBase(BaseModel):\n    first_name: str\n    last_name: str\n    username: str\n    email: EmailStr  ",
+        "detail": "app.models.schemas",
         "documentation": {}
     },
     {
@@ -274,7 +1206,7 @@
         "kind": 6,
         "importPath": "app.models.schemas",
         "description": "app.models.schemas",
-        "peekOfCode": "class UserBase(BaseModel):\n    username: str\n    email: EmailStr\nclass UserCreate(UserBase):\n    password: str\nclass User(UserBase):\n    id: int\n    class Config:\n        from_attributes = True\n# Add similar schemas for Handyman and ServiceRequest",
+        "peekOfCode": "class UserBase(BaseModel):\n    first_name: str\n    last_name: str\n    username: str\n    email: EmailStr  \n    phone: constr(min_length=10, max_length=15) = Field(..., pattern=r'^\\+?\\d{10,15}$')\nclass UserCreate(UserBase):\n    user_type: Optional[UserType] = UserType.USER\n    password: str\nclass User(UserBase):",
         "detail": "app.models.schemas",
         "documentation": {}
     },
@@ -283,7 +1215,7 @@
         "kind": 6,
         "importPath": "app.models.schemas",
         "description": "app.models.schemas",
-        "peekOfCode": "class UserCreate(UserBase):\n    password: str\nclass User(UserBase):\n    id: int\n    class Config:\n        from_attributes = True\n# Add similar schemas for Handyman and ServiceRequest",
+        "peekOfCode": "class UserCreate(UserBase):\n    user_type: Optional[UserType] = UserType.USER\n    password: str\nclass User(UserBase):\n    id: int\n    class Config:\n        form_attributes = True  # Use form_attributes for SQLAlchemy integration\nclass HandymanBase(UserBase):\n    latitude: Optional[float] = None  # Use float for latitude/longitude\n    longitude: Optional[float] = None",
         "detail": "app.models.schemas",
         "documentation": {}
     },
@@ -292,8 +1224,296 @@
         "kind": 6,
         "importPath": "app.models.schemas",
         "description": "app.models.schemas",
-        "peekOfCode": "class User(UserBase):\n    id: int\n    class Config:\n        from_attributes = True\n# Add similar schemas for Handyman and ServiceRequest",
+        "peekOfCode": "class User(UserBase):\n    id: int\n    class Config:\n        form_attributes = True  # Use form_attributes for SQLAlchemy integration\nclass HandymanBase(UserBase):\n    latitude: Optional[float] = None  # Use float for latitude/longitude\n    longitude: Optional[float] = None\n    specialization: str\n    rating: Optional[float] = None\nclass HandymanCreate(HandymanBase):",
         "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "HandymanBase",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class HandymanBase(UserBase):\n    latitude: Optional[float] = None  # Use float for latitude/longitude\n    longitude: Optional[float] = None\n    specialization: str\n    rating: Optional[float] = None\nclass HandymanCreate(HandymanBase):\n    user_type: Optional[UserType] = UserType.HANDYMAN\n    password: str\nclass Handyman(HandymanBase):\n    id: int",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "HandymanCreate",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class HandymanCreate(HandymanBase):\n    user_type: Optional[UserType] = UserType.HANDYMAN\n    password: str\nclass Handyman(HandymanBase):\n    id: int\n    class Config:\n        form_attributes = True\nclass UpdateServiceStatusRequest(BaseModel):\n    status: str\nclass ServiceRequestBase(BaseModel):",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "Handyman",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class Handyman(HandymanBase):\n    id: int\n    class Config:\n        form_attributes = True\nclass UpdateServiceStatusRequest(BaseModel):\n    status: str\nclass ServiceRequestBase(BaseModel):\n    user_id: int\n    car_make: str\n    car_model: str",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateServiceStatusRequest",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class UpdateServiceStatusRequest(BaseModel):\n    status: str\nclass ServiceRequestBase(BaseModel):\n    user_id: int\n    car_make: str\n    car_model: str\n    car_year: str\n    issue_description: str\n    location: str\n    latitude: float",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceRequestBase",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class ServiceRequestBase(BaseModel):\n    user_id: int\n    car_make: str\n    car_model: str\n    car_year: str\n    issue_description: str\n    location: str\n    latitude: float\n    longitude: float\n    status: Optional[ServiceStatus] = ServiceStatus.PENDING",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceRequestCreate",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class ServiceRequestCreate(ServiceRequestBase):\n    pass\nclass ServiceRequest(ServiceRequestBase):\n    id: int\n    handyman_id: Optional[int] = None\n    class Config:\n        form_attributes = True\nclass PaymentBase(BaseModel):\n    user_id: int\n    service_request_id: int",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ServiceRequest",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class ServiceRequest(ServiceRequestBase):\n    id: int\n    handyman_id: Optional[int] = None\n    class Config:\n        form_attributes = True\nclass PaymentBase(BaseModel):\n    user_id: int\n    service_request_id: int\n    amount: float\n    status: Optional[str] = \"pending\"",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentBase",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class PaymentBase(BaseModel):\n    user_id: int\n    service_request_id: int\n    amount: float\n    status: Optional[str] = \"pending\"\nclass PaymentCreate(PaymentBase):\n    pass\nclass Payment(PaymentBase):\n    id: int\n    class Config:",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentCreate",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class PaymentCreate(PaymentBase):\n    pass\nclass Payment(PaymentBase):\n    id: int\n    class Config:\n        form_attributes = True\nclass Token(BaseModel):\n    access_token: str\n    token_type: str\n    user: Optional[User]  # Ensure User is defined before this line",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "Payment",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class Payment(PaymentBase):\n    id: int\n    class Config:\n        form_attributes = True\nclass Token(BaseModel):\n    access_token: str\n    token_type: str\n    user: Optional[User]  # Ensure User is defined before this line\n    user_type: Optional[UserType]\n    class Config:",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "Token",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class Token(BaseModel):\n    access_token: str\n    token_type: str\n    user: Optional[User]  # Ensure User is defined before this line\n    user_type: Optional[UserType]\n    class Config:\n        form_attributes = True\nclass Rating(BaseModel):\n    user_id: str\n    rating: int",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "Rating",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class Rating(BaseModel):\n    user_id: str\n    rating: int\n    comments: str\n    service_id: int\nclass CompleteServiceRequest(BaseModel):\n    handyman_id: str\n    end_time: str\n    final_cost: float",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "CompleteServiceRequest",
+        "kind": 6,
+        "importPath": "app.models.schemas",
+        "description": "app.models.schemas",
+        "peekOfCode": "class CompleteServiceRequest(BaseModel):\n    handyman_id: str\n    end_time: str\n    final_cost: float",
+        "detail": "app.models.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "kind": 2,
+        "importPath": "app.routers.auth",
+        "description": "app.routers.auth",
+        "peekOfCode": "def verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):\n    if user_type == \"user\":\n        user = db.query(models.User).filter(models.User.username == username).first()\n    else:\n        user = db.query(models.Handyman).filter(models.Handyman.username == username).first()\n    if not user or not verify_password(password, user.hashed_password):",
+        "detail": "app.routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_password_hash",
+        "kind": 2,
+        "importPath": "app.routers.auth",
+        "description": "app.routers.auth",
+        "peekOfCode": "def get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):\n    if user_type == \"user\":\n        user = db.query(models.User).filter(models.User.username == username).first()\n    else:\n        user = db.query(models.Handyman).filter(models.Handyman.username == username).first()\n    if not user or not verify_password(password, user.hashed_password):\n        return False\n    return user",
+        "detail": "app.routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate_user",
+        "kind": 2,
+        "importPath": "app.routers.auth",
+        "description": "app.routers.auth",
+        "peekOfCode": "def authenticate_user(db, username: str, password: str, user_type: str):\n    if user_type == \"user\":\n        user = db.query(models.User).filter(models.User.username == username).first()\n    else:\n        user = db.query(models.Handyman).filter(models.Handyman.username == username).first()\n    if not user or not verify_password(password, user.hashed_password):\n        return False\n    return user\ndef create_access_token(data: dict, expires_delta: timedelta = None):\n    to_encode = data.copy()",
+        "detail": "app.routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "kind": 2,
+        "importPath": "app.routers.auth",
+        "description": "app.routers.auth",
+        "peekOfCode": "def create_access_token(data: dict, expires_delta: timedelta = None):\n    to_encode = data.copy()\n    if expires_delta:\n        expire = datetime.utcnow() + expires_delta\n    else:\n        expire = datetime.utcnow() + timedelta(minutes=15)\n    to_encode.update({\"exp\": expire})\n    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)\n    return encoded_jwt\n@router.post(\"/login\", response_model=schemas.Token)",
+        "detail": "app.routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "app.routers.auth",
+        "description": "app.routers.auth",
+        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\nALGORITHM = os.getenv(\"ALGORITHM\")\nACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv(\"ACCESS_TOKEN_EXPIRE_MINUTES\"))\nrouter = APIRouter(prefix=\"/auth\", tags=[\"auth\"])\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)",
+        "detail": "app.routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "ALGORITHM",
+        "kind": 5,
+        "importPath": "app.routers.auth",
+        "description": "app.routers.auth",
+        "peekOfCode": "ALGORITHM = os.getenv(\"ALGORITHM\")\nACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv(\"ACCESS_TOKEN_EXPIRE_MINUTES\"))\nrouter = APIRouter(prefix=\"/auth\", tags=[\"auth\"])\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):",
+        "detail": "app.routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "ACCESS_TOKEN_EXPIRE_MINUTES",
+        "kind": 5,
+        "importPath": "app.routers.auth",
+        "description": "app.routers.auth",
+        "peekOfCode": "ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv(\"ACCESS_TOKEN_EXPIRE_MINUTES\"))\nrouter = APIRouter(prefix=\"/auth\", tags=[\"auth\"])\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):\n    if user_type == \"user\":",
+        "detail": "app.routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.auth",
+        "description": "app.routers.auth",
+        "peekOfCode": "router = APIRouter(prefix=\"/auth\", tags=[\"auth\"])\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):\n    if user_type == \"user\":\n        user = db.query(models.User).filter(models.User.username == username).first()",
+        "detail": "app.routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "pwd_context",
+        "kind": 5,
+        "importPath": "app.routers.auth",
+        "description": "app.routers.auth",
+        "peekOfCode": "pwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):\n    if user_type == \"user\":\n        user = db.query(models.User).filter(models.User.username == username).first()\n    else:",
+        "detail": "app.routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "oauth2_scheme",
+        "kind": 5,
+        "importPath": "app.routers.auth",
+        "description": "app.routers.auth",
+        "peekOfCode": "oauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):\n    if user_type == \"user\":\n        user = db.query(models.User).filter(models.User.username == username).first()\n    else:\n        user = db.query(models.Handyman).filter(models.Handyman.username == username).first()",
+        "detail": "app.routers.auth",
+        "documentation": {}
+    },
+    {
+        "label": "match_handymen",
+        "kind": 2,
+        "importPath": "app.routers.handyman",
+        "description": "app.routers.handyman",
+        "peekOfCode": "def match_handymen(request: schemas.ServiceRequestCreate, db: Session = Depends(get_db)):\n    # Find nearby handymen based on the user's location and service request details\n    nearby_handymen = db.query(Handyman).filter(\n        # Assuming you have a distance calculation function\n        calculate_distance(Handyman.latitude, Handyman.longitude, request.latitude, request.longitude) < SOME_RADIUS\n    ).order_by(Handyman.rating.desc()).all()\n    if not nearby_handymen:\n        raise HTTPException(status_code=404, detail=\"No available handymen found\")\n    return nearby_handymen\ndef find_nearby_handymen(request: models.ServiceRequest, db: Session, radius: float = 10.0):",
+        "detail": "app.routers.handyman",
+        "documentation": {}
+    },
+    {
+        "label": "find_nearby_handymen",
+        "kind": 2,
+        "importPath": "app.routers.handyman",
+        "description": "app.routers.handyman",
+        "peekOfCode": "def find_nearby_handymen(request: models.ServiceRequest, db: Session, radius: float = 10.0):\n    # Fetch all active handymen from the database\n    # handymen = db.query(Handyman).filter(Handyman.is_active == True).all()\n    handymen = db.query(models.Handyman).all()\n    nearby_handymen = []\n    # Loop through all handymen and calculate the distance from the user's location\n    for handyman in handymen:\n        distance = geodesic((request.latitude, request.longitude), (handyman.latitude, handyman.longitude)).km\n        if distance <= radius:\n            nearby_handymen.append(handyman)",
+        "detail": "app.routers.handyman",
+        "documentation": {}
+    },
+    {
+        "label": "pwd_context",
+        "kind": 5,
+        "importPath": "app.routers.handyman",
+        "description": "app.routers.handyman",
+        "peekOfCode": "pwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\nrouter = APIRouter(prefix=\"/handymen\", tags=[\"handymen\"])\ndef match_handymen(request: schemas.ServiceRequestCreate, db: Session = Depends(get_db)):\n    # Find nearby handymen based on the user's location and service request details\n    nearby_handymen = db.query(Handyman).filter(\n        # Assuming you have a distance calculation function\n        calculate_distance(Handyman.latitude, Handyman.longitude, request.latitude, request.longitude) < SOME_RADIUS\n    ).order_by(Handyman.rating.desc()).all()\n    if not nearby_handymen:\n        raise HTTPException(status_code=404, detail=\"No available handymen found\")",
+        "detail": "app.routers.handyman",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.handyman",
+        "description": "app.routers.handyman",
+        "peekOfCode": "router = APIRouter(prefix=\"/handymen\", tags=[\"handymen\"])\ndef match_handymen(request: schemas.ServiceRequestCreate, db: Session = Depends(get_db)):\n    # Find nearby handymen based on the user's location and service request details\n    nearby_handymen = db.query(Handyman).filter(\n        # Assuming you have a distance calculation function\n        calculate_distance(Handyman.latitude, Handyman.longitude, request.latitude, request.longitude) < SOME_RADIUS\n    ).order_by(Handyman.rating.desc()).all()\n    if not nearby_handymen:\n        raise HTTPException(status_code=404, detail=\"No available handymen found\")\n    return nearby_handymen",
+        "detail": "app.routers.handyman",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.match",
+        "description": "app.routers.match",
+        "peekOfCode": "router = APIRouter()\n@router.post(\"/api/match_handymen\", response_model=List[HandymanOut])\nasync def match_handymen(request: ServiceRequestCreate, db: Session = Depends(get_db)):\n    # Find nearby handymen based on the user's location and service request details\n    nearby_handymen = db.query(Handyman).filter(\n        # Assuming you have a distance calculation function\n        calculate_distance(Handyman.latitude, Handyman.longitude, request.latitude, request.longitude) < SOME_RADIUS\n    ).order_by(Handyman.rating.desc()).all()\n    if not nearby_handymen:\n        raise HTTPException(status_code=404, detail=\"No available handymen found\")",
+        "detail": "app.routers.match",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.payment",
+        "description": "app.routers.payment",
+        "peekOfCode": "router = APIRouter(prefix=\"/payment\", tags=[\"payment\"])\n@router.post(\"/service/{service_id}/payment\")\nasync def process_payment(service_id: int, request: schemas.PaymentBase, current_user:models.User = Depends(auth.read_users_me), db: Session = Depends(get_db)):\n    service_request = db.query(models.ServiceRequest).filter(models.ServiceRequest.id == service_id).first()\n    if not service_request:\n        raise HTTPException(status_code=404, detail=\"Service request not found\")\n    # Process payment (this is a placeholder; integrate with a payment gateway)\n    # For example, you might call an external payment API here.\n    service_request.payment_status = \"paid\"\n    service_request.amount_paid = request.amount",
+        "detail": "app.routers.payment",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.request",
+        "description": "app.routers.request",
+        "peekOfCode": "router = APIRouter(prefix=\"/request\", tags=[\"request\"])\nasync def notify_handyman(handyman_id, service_request_id):\n    db_handyman = db.query(models.Handyman).filter(models.Handyman.id == handyman_id).first()\n    if not db_handyman:\n        raise HTTPException(s_code=404, details=\"Handyman not found\")\n    message = f\"You have been selected for a service request ID:{service_request_id}\"\n    logging.info(f\"notification to handyman {handyman_id}:{message}\")\n@router.post(\"/create\", response_model=schemas.ServiceRequest)\nasync def create_service_request(request: schemas.ServiceRequestCreate, db: Session = Depends(get_db)):\n    db_service_request = models.ServiceRequest(**request.dict())",
+        "detail": "app.routers.request",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routers.service",
+        "description": "app.routers.service",
+        "peekOfCode": "router = APIRouter(prefix=\"/service\", tags=[\"service \"])\n@router.put(\"/edit/{request_id}\")\nasync def update_service_request(request_id:int, current_user:models.User = Depends(auth.read_users_me), db:Session = Depends(get_db)):\n    service_request = db.query(models.ServiceRequest).filter(models.ServiceRequest.user_id == current_user.id).first()\n    if not service_request:\n        raise HTTPException(status_code=404, detail=\"Service request not found\")\n    service_request.make = request.car_make\n    return service_request\n@router.delete(\"/delete/{request_id}\")\nasync def delete_service_request(request_id:int, current_user:models.User = Depends(auth.read_users_me), db:Session = Depends(get_db)):",
+        "detail": "app.routers.service",
+        "documentation": {}
+    },
+    {
+        "label": "pwd_context",
+        "kind": 5,
+        "importPath": "app.routers.users",
+        "description": "app.routers.users",
+        "peekOfCode": "pwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\nrouter = APIRouter(prefix=\"/users\", tags=[\"users\"])\n@router.post(\"/\", response_model=schemas.User)\nasync def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):\n    db_user = models.User(username=user.username, email=user.email, first_name=user.first_name, last_name=user.last_name, phone=user.phone, hashed_password = pwd_context.hash(user.password))\n    db.add(db_user)\n    db.commit()\n    db.refresh(db_user)\n    return db_user\n@router.get(\"/{user_id}\", response_model=schemas.User)",
+        "detail": "app.routers.users",
         "documentation": {}
     },
     {
@@ -301,16 +1521,34 @@
         "kind": 5,
         "importPath": "app.routers.users",
         "description": "app.routers.users",
-        "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"users\"])\n@router.post(\"/\", response_model=schemas.User)\nasync def create_user(user: schemas.UserCreate):\n    query = models.User.__table__.insert().values(**user.dict())\n    last_record_id = await database.execute(query)\n    return {**user.dict(), \"id\": last_record_id}\n@router.get(\"/{user_id}\", response_model=schemas.User)\nasync def read_user(user_id: int):\n    query = models.User.__table__.select().where(models.User.id == user_id)\n    return await database.fetch_one(query)",
+        "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"users\"])\n@router.post(\"/\", response_model=schemas.User)\nasync def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):\n    db_user = models.User(username=user.username, email=user.email, first_name=user.first_name, last_name=user.last_name, phone=user.phone, hashed_password = pwd_context.hash(user.password))\n    db.add(db_user)\n    db.commit()\n    db.refresh(db_user)\n    return db_user\n@router.get(\"/{user_id}\", response_model=schemas.User)\nasync def get_user_by_id(user_id: int, db: Session = Depends(get_db)):",
         "detail": "app.routers.users",
         "documentation": {}
     },
     {
-        "label": "DATABASE_URL",
+        "label": "get_active_connections",
+        "kind": 2,
+        "importPath": "app.services.websocket",
+        "description": "app.services.websocket",
+        "peekOfCode": "def get_active_connections() -> List[str]:\n    return list(active_connections.keys())",
+        "detail": "app.services.websocket",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app.services.websocket",
+        "description": "app.services.websocket",
+        "peekOfCode": "app = FastAPI()\n# Dictionary to store connected clients\nactive_connections: Dict[str, WebSocket] = {}\n@app.websocket(\"/ws/{user_id}\")\nasync def websocket_endpoint(websocket: WebSocket, user_id: str):\n    await websocket.accept()\n    active_connections[user_id] = websocket  # Store the connection\n    try:\n        await websocket.send_text(\"WebSocket connected\")\n        while True:",
+        "detail": "app.services.websocket",
+        "documentation": {}
+    },
+    {
+        "label": "ENV",
         "kind": 5,
         "importPath": "app.database",
         "description": "app.database",
-        "peekOfCode": "DATABASE_URL = \"sqlite:///./test.db\"\ndatabase = Database(DATABASE_URL)\nmetadata = MetaData()\nengine = create_engine(\n    DATABASE_URL, connect_args={\"check_same_thread\": False}\n)\nBase = declarative_base()",
+        "peekOfCode": "ENV = os.getenv(\"ENV\", \"development\")  # Default to development if not set\n# Set up database URL based on the environment\nif ENV == \"production\":\n    POSTGRES_USER = os.getenv(\"POSTGRES_USER\")\n    POSTGRES_PASSWORD = os.getenv(\"POSTGRES_PASSWORD\")\n    POSTGRES_HOST = os.getenv(\"POSTGRES_HOST\")\n    POSTGRES_DATABASE = os.getenv(\"POSTGRES_DATABASE\")\n    PORT =5432\n    DB_URL = f\"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{PORT}/{POSTGRES_DATABASE}\"\nelse:",
         "detail": "app.database",
         "documentation": {}
     },
@@ -319,7 +1557,7 @@
         "kind": 5,
         "importPath": "app.database",
         "description": "app.database",
-        "peekOfCode": "database = Database(DATABASE_URL)\nmetadata = MetaData()\nengine = create_engine(\n    DATABASE_URL, connect_args={\"check_same_thread\": False}\n)\nBase = declarative_base()",
+        "peekOfCode": "database = Database(DB_URL)\nmetadata = MetaData()\nengine = create_engine(DB_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nasync def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
         "detail": "app.database",
         "documentation": {}
     },
@@ -328,7 +1566,7 @@
         "kind": 5,
         "importPath": "app.database",
         "description": "app.database",
-        "peekOfCode": "metadata = MetaData()\nengine = create_engine(\n    DATABASE_URL, connect_args={\"check_same_thread\": False}\n)\nBase = declarative_base()",
+        "peekOfCode": "metadata = MetaData()\nengine = create_engine(DB_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nasync def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
         "detail": "app.database",
         "documentation": {}
     },
@@ -337,16 +1575,16 @@
         "kind": 5,
         "importPath": "app.database",
         "description": "app.database",
-        "peekOfCode": "engine = create_engine(\n    DATABASE_URL, connect_args={\"check_same_thread\": False}\n)\nBase = declarative_base()",
+        "peekOfCode": "engine = create_engine(DB_URL)\nSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nasync def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
         "detail": "app.database",
         "documentation": {}
     },
     {
-        "label": "Base",
+        "label": "SessionLocal",
         "kind": 5,
         "importPath": "app.database",
         "description": "app.database",
-        "peekOfCode": "Base = declarative_base()",
+        "peekOfCode": "SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)\nasync def get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()",
         "detail": "app.database",
         "documentation": {}
     },
@@ -355,7 +1593,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI(lifespan=lifespan)\napp.include_router(users.router)\n# app.include_router(handymen.router)\n# app.include_router(service_requests.router)\n# app.include_router(payments.router)\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Welcome to the Car Repair Handyman API\"}\nif __name__ == \"__main__\":\n uvicorn.run(\"main:app\", host=\"127.0.0.1\", port=8000, reload=True)",
+        "peekOfCode": "app = FastAPI(lifespan=lifespan)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"*\"], \n    allow_credentials=True,\n    allow_methods=[\"*\"],   \n    allow_headers=[\"*\"],   \n)\n@app.get(\"/\")\nasync def root():",
         "detail": "app.main",
         "documentation": {}
     }

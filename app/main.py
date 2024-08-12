@@ -7,39 +7,32 @@ from models.models import Base
 from contextlib import asynccontextmanager
 import uvicorn
 import subprocess
-# import websockets
 from database import engine, database
 from routers import users,auth,handyman, service, request, payment
-# from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 
 
-# @asynccontextmanager
-# async def lifespan(app: FastAPI):
+@asynccontextmanager
+async def lifespan(app: FastAPI):
 #     # Startup: connect to the database
     
+    try:
+        Base.metadata.create_all(engine)   
+        await database.connect()
+        subprocess.run(["alembic", "upgrade", "head"], check=True)
         
+    except Exception as e:
+        print(f"Error initializing database: {e}")
     
-#     try:
-#         Base.metadata.create_all(engine)   
-#         await database.connect()
-#         subprocess.run(["alembic", "upgrade", "head"], check=True)
+    yield
+    # Shutdown: disconnect from the database
+    await database.disconnect()
 
-        
-#     except Exception as e:
-#         print(f"Error initializing database: {e}")
-    
-#     yield
-#     # Shutdown: disconnect from the database
-#     await database.disconnect()
-    
+app = FastAPI(lifespan=lifespan)
 
-# @app.get("/")
-# async def read_root():
-#     print("inside testing...")
 
-app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
@@ -68,6 +61,6 @@ app.include_router(payment.router)
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run("main:app")
 
 
