@@ -1386,7 +1386,7 @@
         "kind": 5,
         "importPath": "app.routers.auth",
         "description": "app.routers.auth",
-        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\nALGORITHM = os.getenv(\"ALGORITHM\")\nACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv(\"ACCESS_TOKEN_EXPIRE_MINUTES\"))\nrouter = APIRouter(prefix=\"/auth\", tags=[\"auth\"])\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)",
+        "peekOfCode": "SECRET_KEY = os.getenv(\"SECRET_KEY\")\nALGORITHM = os.getenv(\"ALGORITHM\")\nACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv(\"ACCESS_TOKEN_EXPIRE_MINUTES\"))\nrouter = APIRouter(prefix=\"/auth\", tags=[\"Auth\"])\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)",
         "detail": "app.routers.auth",
         "documentation": {}
     },
@@ -1395,7 +1395,7 @@
         "kind": 5,
         "importPath": "app.routers.auth",
         "description": "app.routers.auth",
-        "peekOfCode": "ALGORITHM = os.getenv(\"ALGORITHM\")\nACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv(\"ACCESS_TOKEN_EXPIRE_MINUTES\"))\nrouter = APIRouter(prefix=\"/auth\", tags=[\"auth\"])\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):",
+        "peekOfCode": "ALGORITHM = os.getenv(\"ALGORITHM\")\nACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv(\"ACCESS_TOKEN_EXPIRE_MINUTES\"))\nrouter = APIRouter(prefix=\"/auth\", tags=[\"Auth\"])\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):",
         "detail": "app.routers.auth",
         "documentation": {}
     },
@@ -1404,7 +1404,7 @@
         "kind": 5,
         "importPath": "app.routers.auth",
         "description": "app.routers.auth",
-        "peekOfCode": "ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv(\"ACCESS_TOKEN_EXPIRE_MINUTES\"))\nrouter = APIRouter(prefix=\"/auth\", tags=[\"auth\"])\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):\n    if user_type == \"user\":",
+        "peekOfCode": "ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv(\"ACCESS_TOKEN_EXPIRE_MINUTES\"))\nrouter = APIRouter(prefix=\"/auth\", tags=[\"Auth\"])\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):\n    if user_type == \"user\":",
         "detail": "app.routers.auth",
         "documentation": {}
     },
@@ -1413,7 +1413,7 @@
         "kind": 5,
         "importPath": "app.routers.auth",
         "description": "app.routers.auth",
-        "peekOfCode": "router = APIRouter(prefix=\"/auth\", tags=[\"auth\"])\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):\n    if user_type == \"user\":\n        user = db.query(models.User).filter(models.User.username == username).first()",
+        "peekOfCode": "router = APIRouter(prefix=\"/auth\", tags=[\"Auth\"])\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"auth/login\")\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\ndef get_password_hash(password):\n    return pwd_context.hash(password)\ndef authenticate_user(db, username: str, password: str, user_type: str):\n    if user_type == \"user\":\n        user = db.query(models.User).filter(models.User.username == username).first()",
         "detail": "app.routers.auth",
         "documentation": {}
     },
@@ -1458,7 +1458,7 @@
         "kind": 5,
         "importPath": "app.routers.handyman",
         "description": "app.routers.handyman",
-        "peekOfCode": "pwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\nrouter = APIRouter(prefix=\"/handymen\", tags=[\"handymen\"])\ndef match_handymen(request: schemas.ServiceRequestCreate, db: Session = Depends(get_db)):\n    # Find nearby handymen based on the user's location and service request details\n    nearby_handymen = db.query(Handyman).filter(\n        # Assuming you have a distance calculation function\n        calculate_distance(Handyman.latitude, Handyman.longitude, request.latitude, request.longitude) < SOME_RADIUS\n    ).order_by(Handyman.rating.desc()).all()\n    if not nearby_handymen:\n        raise HTTPException(status_code=404, detail=\"No available handymen found\")",
+        "peekOfCode": "pwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\nrouter = APIRouter(prefix=\"/handymen\", tags=[\"Handymen\"])\ndef match_handymen(request: schemas.ServiceRequestCreate, db: Session = Depends(get_db)):\n    # Find nearby handymen based on the user's location and service request details\n    nearby_handymen = db.query(Handyman).filter(\n        # Assuming you have a distance calculation function\n        calculate_distance(Handyman.latitude, Handyman.longitude, request.latitude, request.longitude) < SOME_RADIUS\n    ).order_by(Handyman.rating.desc()).all()\n    if not nearby_handymen:\n        raise HTTPException(status_code=404, detail=\"No available handymen found\")",
         "detail": "app.routers.handyman",
         "documentation": {}
     },
@@ -1467,7 +1467,7 @@
         "kind": 5,
         "importPath": "app.routers.handyman",
         "description": "app.routers.handyman",
-        "peekOfCode": "router = APIRouter(prefix=\"/handymen\", tags=[\"handymen\"])\ndef match_handymen(request: schemas.ServiceRequestCreate, db: Session = Depends(get_db)):\n    # Find nearby handymen based on the user's location and service request details\n    nearby_handymen = db.query(Handyman).filter(\n        # Assuming you have a distance calculation function\n        calculate_distance(Handyman.latitude, Handyman.longitude, request.latitude, request.longitude) < SOME_RADIUS\n    ).order_by(Handyman.rating.desc()).all()\n    if not nearby_handymen:\n        raise HTTPException(status_code=404, detail=\"No available handymen found\")\n    return nearby_handymen",
+        "peekOfCode": "router = APIRouter(prefix=\"/handymen\", tags=[\"Handymen\"])\ndef match_handymen(request: schemas.ServiceRequestCreate, db: Session = Depends(get_db)):\n    # Find nearby handymen based on the user's location and service request details\n    nearby_handymen = db.query(Handyman).filter(\n        # Assuming you have a distance calculation function\n        calculate_distance(Handyman.latitude, Handyman.longitude, request.latitude, request.longitude) < SOME_RADIUS\n    ).order_by(Handyman.rating.desc()).all()\n    if not nearby_handymen:\n        raise HTTPException(status_code=404, detail=\"No available handymen found\")\n    return nearby_handymen",
         "detail": "app.routers.handyman",
         "documentation": {}
     },
@@ -1485,7 +1485,7 @@
         "kind": 5,
         "importPath": "app.routers.payment",
         "description": "app.routers.payment",
-        "peekOfCode": "router = APIRouter(prefix=\"/payment\", tags=[\"payment\"])\n@router.post(\"/service/{service_id}/payment\")\nasync def process_payment(service_id: int, request: schemas.PaymentBase, current_user:models.User = Depends(auth.read_users_me), db: Session = Depends(get_db)):\n    service_request = db.query(models.ServiceRequest).filter(models.ServiceRequest.id == service_id).first()\n    if not service_request:\n        raise HTTPException(status_code=404, detail=\"Service request not found\")\n    # Process payment (this is a placeholder; integrate with a payment gateway)\n    # For example, you might call an external payment API here.\n    service_request.payment_status = \"paid\"\n    service_request.amount_paid = request.amount",
+        "peekOfCode": "router = APIRouter(prefix=\"/payment\", tags=[\"Payment\"])\n@router.post(\"/service/{service_id}/payment\")\nasync def process_payment(service_id: int, request: schemas.PaymentBase, current_user:models.User = Depends(auth.read_users_me), db: Session = Depends(get_db)):\n    service_request = db.query(models.ServiceRequest).filter(models.ServiceRequest.id == service_id).first()\n    if not service_request:\n        raise HTTPException(status_code=404, detail=\"Service request not found\")\n    # Process payment (this is a placeholder; integrate with a payment gateway)\n    # For example, you might call an external payment API here.\n    service_request.payment_status = \"paid\"\n    service_request.amount_paid = request.amount",
         "detail": "app.routers.payment",
         "documentation": {}
     },
@@ -1494,7 +1494,7 @@
         "kind": 5,
         "importPath": "app.routers.request",
         "description": "app.routers.request",
-        "peekOfCode": "router = APIRouter(prefix=\"/request\", tags=[\"request\"])\nasync def notify_handyman(handyman_id, service_request_id):\n    db_handyman = db.query(models.Handyman).filter(models.Handyman.id == handyman_id).first()\n    if not db_handyman:\n        raise HTTPException(s_code=404, details=\"Handyman not found\")\n    message = f\"You have been selected for a service request ID:{service_request_id}\"\n    logging.info(f\"notification to handyman {handyman_id}:{message}\")\n@router.post(\"/create\", response_model=schemas.ServiceRequest)\nasync def create_service_request(request: schemas.ServiceRequestCreate, db: Session = Depends(get_db)):\n    db_service_request = models.ServiceRequest(**request.dict())",
+        "peekOfCode": "router = APIRouter(prefix=\"/request\", tags=[\"Request\"])\nasync def notify_handyman(handyman_id, service_request_id):\n    db_handyman = db.query(models.Handyman).filter(models.Handyman.id == handyman_id).first()\n    if not db_handyman:\n        raise HTTPException(s_code=404, details=\"Handyman not found\")\n    message = f\"You have been selected for a service request ID:{service_request_id}\"\n    logging.info(f\"notification to handyman {handyman_id}:{message}\")\n@router.post(\"/create\", response_model=schemas.ServiceRequest)\nasync def create_service_request(request: schemas.ServiceRequestCreate, db: Session = Depends(get_db)):\n    db_service_request = models.ServiceRequest(**request.dict())",
         "detail": "app.routers.request",
         "documentation": {}
     },
@@ -1503,7 +1503,7 @@
         "kind": 5,
         "importPath": "app.routers.service",
         "description": "app.routers.service",
-        "peekOfCode": "router = APIRouter(prefix=\"/service\", tags=[\"service \"])\n@router.put(\"/edit/{request_id}\")\nasync def update_service_request(request_id:int, current_user:models.User = Depends(auth.read_users_me), db:Session = Depends(get_db)):\n    service_request = db.query(models.ServiceRequest).filter(models.ServiceRequest.user_id == current_user.id).first()\n    if not service_request:\n        raise HTTPException(status_code=404, detail=\"Service request not found\")\n    service_request.make = request.car_make\n    return service_request\n@router.delete(\"/delete/{request_id}\")\nasync def delete_service_request(request_id:int, current_user:models.User = Depends(auth.read_users_me), db:Session = Depends(get_db)):",
+        "peekOfCode": "router = APIRouter(prefix=\"/service\", tags=[\"Service \"])\n@router.put(\"/edit/{request_id}\")\nasync def update_service_request(request_id:int, current_user:models.User = Depends(auth.read_users_me), db:Session = Depends(get_db)):\n    service_request = db.query(models.ServiceRequest).filter(models.ServiceRequest.user_id == current_user.id).first()\n    if not service_request:\n        raise HTTPException(status_code=404, detail=\"Service request not found\")\n    service_request.make = request.car_make\n    return service_request\n@router.delete(\"/delete/{request_id}\")\nasync def delete_service_request(request_id:int, current_user:models.User = Depends(auth.read_users_me), db:Session = Depends(get_db)):",
         "detail": "app.routers.service",
         "documentation": {}
     },
@@ -1512,7 +1512,7 @@
         "kind": 5,
         "importPath": "app.routers.users",
         "description": "app.routers.users",
-        "peekOfCode": "pwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\nrouter = APIRouter(prefix=\"/users\", tags=[\"users\"])\n@router.post(\"/\", response_model=schemas.User)\nasync def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):\n    db_user = models.User(username=user.username, email=user.email, first_name=user.first_name, last_name=user.last_name, phone=user.phone, hashed_password = pwd_context.hash(user.password))\n    db.add(db_user)\n    db.commit()\n    db.refresh(db_user)\n    return db_user\n@router.get(\"/{user_id}\", response_model=schemas.User)",
+        "peekOfCode": "pwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\nrouter = APIRouter(prefix=\"/users\", tags=[\"Users\"])\n@router.post(\"/\", response_model=schemas.User)\nasync def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):\n    db_user = models.User(username=user.username, email=user.email, first_name=user.first_name, last_name=user.last_name, phone=user.phone, hashed_password = pwd_context.hash(user.password))\n    db.add(db_user)\n    db.commit()\n    db.refresh(db_user)\n    return db_user\n@router.get(\"/{user_id}\", response_model=schemas.User)",
         "detail": "app.routers.users",
         "documentation": {}
     },
@@ -1521,7 +1521,7 @@
         "kind": 5,
         "importPath": "app.routers.users",
         "description": "app.routers.users",
-        "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"users\"])\n@router.post(\"/\", response_model=schemas.User)\nasync def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):\n    db_user = models.User(username=user.username, email=user.email, first_name=user.first_name, last_name=user.last_name, phone=user.phone, hashed_password = pwd_context.hash(user.password))\n    db.add(db_user)\n    db.commit()\n    db.refresh(db_user)\n    return db_user\n@router.get(\"/{user_id}\", response_model=schemas.User)\nasync def get_user_by_id(user_id: int, db: Session = Depends(get_db)):",
+        "peekOfCode": "router = APIRouter(prefix=\"/users\", tags=[\"Users\"])\n@router.post(\"/\", response_model=schemas.User)\nasync def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):\n    db_user = models.User(username=user.username, email=user.email, first_name=user.first_name, last_name=user.last_name, phone=user.phone, hashed_password = pwd_context.hash(user.password))\n    db.add(db_user)\n    db.commit()\n    db.refresh(db_user)\n    return db_user\n@router.get(\"/{user_id}\", response_model=schemas.User)\nasync def get_user_by_id(user_id: int, db: Session = Depends(get_db)):",
         "detail": "app.routers.users",
         "documentation": {}
     },
@@ -1593,7 +1593,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI(lifespan=lifespan)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"*\"], \n    allow_credentials=True,\n    allow_methods=[\"*\"],   \n    allow_headers=[\"*\"],   \n)\n@app.get(\"/\")\nasync def root():",
+        "peekOfCode": "app = FastAPI(title=\"Oga-HandyMan.NG\",description=\"handyman services made for Nigerians\", version=\"1.0.0\", contact={\"name\":\"Peter Samuel 😎\", \"email\":\"petsamuel4@gmail.com\", \"linkedIn\":\"linkedin.com/in/bieefilled\"}, lincense_info={\"name\":\"\",\"url\":\"\"}, lifespan=lifespan)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"*\"], \n    allow_credentials=True,\n    allow_methods=[\"*\"],   \n    allow_headers=[\"*\"],   \n)\n@app.get(\"/\")\nasync def root():",
         "detail": "app.main",
         "documentation": {}
     }
