@@ -1,6 +1,9 @@
 # This project uses FastAPI 
 # Author: samuel peter
 # Source: https://github.com/Petsamuel/HandyMan-Backend
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
@@ -10,8 +13,6 @@ from database import get_db
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
-import os
-
 
 load_dotenv();
 SECRET_KEY = os.getenv("SECRET_KEY")
