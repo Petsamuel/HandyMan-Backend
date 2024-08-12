@@ -19,12 +19,10 @@ if ENV == "production":
     DB_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{PORT}/{POSTGRES_DATABASE}"
 else:
     # Use SQLite for local development
-# DATABASE_URL=postgresql://postgres:root@localhost:5432/handyman
+    DB_URL ="postgresql://postgres:root@localhost:5432/handyman"
+#    DATABASE_URL=postgresql://postgres:root@localhost:5432/handyman
 #            postgresql://username:password@localhost:5432/dbname
-    # DB_URL ="postgresql://postgres:root@localhost:5432/handyman"
-    DB_URL ="sqlite:///./handyman.db"
-    # int(DB_URL)
-    # os.getenv("SQLALCHEMY_DATABASE_URL")  
+    # DB_URL ="sqlite:///./handyman.db"
 
 database = Database(DB_URL)
 
