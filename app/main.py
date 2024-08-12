@@ -1,9 +1,11 @@
 # This project uses FastAPI 
 # Author: samuel peter
 # Source: https://github.com/Petsamuel/HandyMan-Backend
-
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fastapi import FastAPI 
-from models.models import Base
+from app.models.models import Base
 from contextlib import asynccontextmanager
 import uvicorn
 import subprocess

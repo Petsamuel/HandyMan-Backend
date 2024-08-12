@@ -243,14 +243,6 @@
         "documentation": {}
     },
     {
-        "label": "Base",
-        "importPath": "models.models",
-        "description": "models.models",
-        "isExtraImport": true,
-        "detail": "models.models",
-        "documentation": {}
-    },
-    {
         "label": "relationship",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
@@ -995,6 +987,14 @@
         "description": "databases",
         "isExtraImport": true,
         "detail": "databases",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.models.models",
+        "description": "app.models.models",
+        "isExtraImport": true,
+        "detail": "app.models.models",
         "documentation": {}
     },
     {
