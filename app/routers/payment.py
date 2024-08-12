@@ -12,7 +12,7 @@ from passlib.context import CryptContext
 
 
 
-router = APIRouter(prefix="/payment", tags=["payment"])
+router = APIRouter(prefix="/payment", tags=["Payment"])
 
 @router.post("/service/{service_id}/payment")
 async def process_payment(service_id: int, request: schemas.PaymentBase, current_user:models.User = Depends(auth.read_users_me), db: Session = Depends(get_db)):

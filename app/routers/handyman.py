@@ -14,7 +14,7 @@ from geopy.distance import geodesic
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-router = APIRouter(prefix="/handymen", tags=["handymen"])
+router = APIRouter(prefix="/handymen", tags=["Handymen"])
 
 
 def match_handymen(request: schemas.ServiceRequestCreate, db: Session = Depends(get_db)):

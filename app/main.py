@@ -30,7 +30,7 @@ async def lifespan(app: FastAPI):
     # Shutdown: disconnect from the database
     await database.disconnect()
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(title="Oga-HandyMan.NG",description="handyman services made for Nigerians", version="1.0.0", contact={"name":"Peter Samuel 😎", "email":"petsamuel4@gmail.com", "linkedIn":"linkedin.com/in/bieefilled"}, lincense_info={"name":"","url":""}, lifespan=lifespan)
 
 
 app.add_middleware(
@@ -45,7 +45,7 @@ app.add_middleware(
 @app.get("/")
 async def root():
    
-    return {"message": "Welcome to the Car Repair Handyman API "}
+    return {"name": "Handyman.NG", "versions":"1.0.0", "description":"api for handyman in nigeria", "contact":{"name":"peter samue","email":"petsamuel4@gmail.com"}}
 
 app.include_router(auth.router)
 app.include_router(users.router)

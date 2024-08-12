@@ -10,7 +10,7 @@ from typing import List
 import logging
 
 
-router = APIRouter(prefix="/service", tags=["service "])
+router = APIRouter(prefix="/service", tags=["Service "])
 
 
 @router.put("/edit/{request_id}")

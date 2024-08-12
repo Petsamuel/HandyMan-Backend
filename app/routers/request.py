@@ -10,7 +10,7 @@ from typing import List
 import logging
 
 
-router = APIRouter(prefix="/request", tags=["request"])
+router = APIRouter(prefix="/request", tags=["Request"])
 
 async def notify_handyman(handyman_id, service_request_id):
     db_handyman = db.query(models.Handyman).filter(models.Handyman.id == handyman_id).first()
