@@ -19,9 +19,9 @@ if ENV == "production":
     DB_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{PORT}/{POSTGRES_DATABASE}"
 else:
     # Use SQLite for local development
-    DB_URL ="postgresql://postgres:root@localhost:5432/handyman"
-#    DATABASE_URL=postgresql://postgres:root@localhost:5432/handyman
-#            postgresql://username:password@localhost:5432/dbname
+    DB_URL = os.getenv("DATABASE_URL")
+    
+#   postgresql://username:password@localhost:5432/dbname
     # DB_URL ="sqlite:///./handyman.db"
 
 database = Database(DB_URL)
