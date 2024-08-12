@@ -1,35 +1,35 @@
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
-from models.models import Base
-from contextlib import asynccontextmanager
+# from models.models import Base
+# from contextlib import asynccontextmanager
 import uvicorn
-import subprocess
-import websockets
-from database import engine, database
+# import subprocess
+# import websockets
+# from database import engine, database
 from routers import users,auth,handyman, service, request, payment
-from fastapi.responses import HTMLResponse
+# from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    # Startup: connect to the database
+# @asynccontextmanager
+# async def lifespan(app: FastAPI):
+#     # Startup: connect to the database
     
-    try:
-        Base.metadata.create_all(engine)   
-        await database.connect()
-        subprocess.run(["alembic", "upgrade", "head"], check=True)
+#     try:
+#         Base.metadata.create_all(engine)   
+#         await database.connect()
+#         subprocess.run(["alembic", "upgrade", "head"], check=True)
         
-    except Exception as e:
-        print(f"Error initializing database: {e}")
+#     except Exception as e:
+#         print(f"Error initializing database: {e}")
     
-    yield
-    # Shutdown: disconnect from the database
-    await database.disconnect()
+#     yield
+#     # Shutdown: disconnect from the database
+#     await database.disconnect()
     
     
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
@@ -41,6 +41,7 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
+   
     return {"message": "Welcome to the Car Repair Handyman API "}
 
 
@@ -55,5 +56,11 @@ app.include_router(payment.router)
 
 
 
+
+
+
+
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="localhost", port=5000, reload=True)
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+
+
