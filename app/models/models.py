@@ -1,3 +1,6 @@
+# This project uses FastAPI 
+# Author: samuel peter
+# Source: https://github.com/Petsamuel/HandyMan-Backend
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, DateTime, func
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base

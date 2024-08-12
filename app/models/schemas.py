@@ -1,3 +1,6 @@
+# This project uses FastAPI 
+# Author: samuel peter
+# Source: https://github.com/Petsamuel/HandyMan-Backend
 from pydantic import BaseModel, EmailStr, constr, validator, Field
 from typing import Optional, List
 from enum import Enum

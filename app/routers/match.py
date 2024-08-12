@@ -1,3 +1,6 @@
+# This project uses FastAPI 
+# Author: samuel peter
+# Source: https://github.com/Petsamuel/HandyMan-Backend
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from database import get_db

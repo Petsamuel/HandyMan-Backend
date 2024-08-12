@@ -5,20 +5,31 @@ import os
 from dotenv import load_dotenv
 load_dotenv();
 
+# Determine the environment
+ENV = os.getenv("ENV", "development")  # Default to development if not set
 
+# Set up database URL based on the environment
+if ENV == "production":
+    POSTGRES_USER = os.getenv("POSTGRES_USER")
+    POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
+    POSTGRES_HOST = os.getenv("POSTGRES_HOST")
+    POSTGRES_DATABASE = os.getenv("POSTGRES_DATABASE")
+    
+    DB_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:5432/{POSTGRES_DATABASE}"
+else:
+    # Use SQLite for local development
+    DB_URL = os.getenv("SQLALCHEMY_DATABASE_URL")  # You can change the path as needed
 
-# DATABASE_URL = os.getenv("DATABASE_URL")
-POSTGRES_USER = os.getenv("POSTGRES_USER")
-POSTGRES_PASSWORD=os.getenv("POSTGRES_PASSWORD")
-POSTGRES_HOST = os.getenv("POSTGRES_HOST")
-POSTGRES_DATABASE = os.getenv("POSTGRES_DATABASE")
-DB_url = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{5432}/{POSTGRES_DATABASE}"
+# Create a Database instance
+database = Database(DB_URL)
 
-database = Database(DB_url)
+# Create SQLAlchemy metadata
 metadata = MetaData()
-engine = create_engine(
-    DB_url, connect_args={"check_same_thread": False}
-)
+
+# Create SQLAlchemy engine
+engine = create_engine(DB_URL)
+
+# Create a session local class
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 

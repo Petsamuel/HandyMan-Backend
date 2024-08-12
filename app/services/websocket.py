@@ -1,3 +1,7 @@
+# This project uses FastAPI 
+# Author: samuel peter
+# Source: https://github.com/Petsamuel/HandyMan-Backend
+
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from typing import Dict, List
 import json
