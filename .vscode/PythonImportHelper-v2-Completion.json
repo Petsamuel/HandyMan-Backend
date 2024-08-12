@@ -236,10 +236,18 @@
     },
     {
         "label": "Base",
-        "importPath": "models.models",
-        "description": "models.models",
+        "importPath": "app.models.models",
+        "description": "app.models.models",
         "isExtraImport": true,
-        "detail": "models.models",
+        "detail": "app.models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "app.models.models",
+        "description": "app.models.models",
+        "isExtraImport": true,
+        "detail": "app.models.models",
         "documentation": {}
     },
     {
@@ -628,186 +636,186 @@
     },
     {
         "label": "models",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "schemas",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "models",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "schemas",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "models",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "schemas",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "models",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "schemas",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "models",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "schemas",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "models",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "schemas",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "models",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "schemas",
-        "importPath": "models",
-        "description": "models",
+        "importPath": "app.models",
+        "description": "app.models",
         "isExtraImport": true,
-        "detail": "models",
+        "detail": "app.models",
         "documentation": {}
     },
     {
         "label": "get_db",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "get_db",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "get_db",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "get_db",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "get_db",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "get_db",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "get_db",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "engine",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
         "label": "database",
-        "importPath": "database",
-        "description": "database",
+        "importPath": "app.database",
+        "description": "app.database",
         "isExtraImport": true,
-        "detail": "database",
+        "detail": "app.database",
         "documentation": {}
     },
     {
@@ -860,18 +868,18 @@
     },
     {
         "label": "services",
-        "importPath": "services",
-        "description": "services",
+        "importPath": "app.services",
+        "description": "app.services",
         "isExtraImport": true,
-        "detail": "services",
+        "detail": "app.services",
         "documentation": {}
     },
     {
         "label": "services",
-        "importPath": "services",
-        "description": "services",
+        "importPath": "app.services",
+        "description": "app.services",
         "isExtraImport": true,
-        "detail": "services",
+        "detail": "app.services",
         "documentation": {}
     },
     {
@@ -902,74 +910,74 @@
     },
     {
         "label": "auth",
-        "importPath": "routers",
-        "description": "routers",
+        "importPath": "app.routers",
+        "description": "app.routers",
         "isExtraImport": true,
-        "detail": "routers",
+        "detail": "app.routers",
         "documentation": {}
     },
     {
         "label": "auth",
-        "importPath": "routers",
-        "description": "routers",
+        "importPath": "app.routers",
+        "description": "app.routers",
         "isExtraImport": true,
-        "detail": "routers",
+        "detail": "app.routers",
         "documentation": {}
     },
     {
         "label": "auth",
-        "importPath": "routers",
-        "description": "routers",
+        "importPath": "app.routers",
+        "description": "app.routers",
         "isExtraImport": true,
-        "detail": "routers",
+        "detail": "app.routers",
         "documentation": {}
     },
     {
         "label": "users",
-        "importPath": "routers",
-        "description": "routers",
+        "importPath": "app.routers",
+        "description": "app.routers",
         "isExtraImport": true,
-        "detail": "routers",
+        "detail": "app.routers",
         "documentation": {}
     },
     {
         "label": "auth",
-        "importPath": "routers",
-        "description": "routers",
+        "importPath": "app.routers",
+        "description": "app.routers",
         "isExtraImport": true,
-        "detail": "routers",
+        "detail": "app.routers",
         "documentation": {}
     },
     {
         "label": "handyman",
-        "importPath": "routers",
-        "description": "routers",
+        "importPath": "app.routers",
+        "description": "app.routers",
         "isExtraImport": true,
-        "detail": "routers",
+        "detail": "app.routers",
         "documentation": {}
     },
     {
         "label": "service",
-        "importPath": "routers",
-        "description": "routers",
+        "importPath": "app.routers",
+        "description": "app.routers",
         "isExtraImport": true,
-        "detail": "routers",
+        "detail": "app.routers",
         "documentation": {}
     },
     {
         "label": "request",
-        "importPath": "routers",
-        "description": "routers",
+        "importPath": "app.routers",
+        "description": "app.routers",
         "isExtraImport": true,
-        "detail": "routers",
+        "detail": "app.routers",
         "documentation": {}
     },
     {
         "label": "payment",
-        "importPath": "routers",
-        "description": "routers",
+        "importPath": "app.routers",
+        "description": "app.routers",
         "isExtraImport": true,
-        "detail": "routers",
+        "detail": "app.routers",
         "documentation": {}
     },
     {
@@ -987,14 +995,6 @@
         "description": "databases",
         "isExtraImport": true,
         "detail": "databases",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "app.models.models",
-        "description": "app.models.models",
-        "isExtraImport": true,
-        "detail": "app.models.models",
         "documentation": {}
     },
     {

@@ -8,8 +8,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from passlib.context import CryptContext
-from models import models, schemas
-from database import get_db
+from app.models import models, schemas
+from app.database import get_db
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
 from dotenv import load_dotenv

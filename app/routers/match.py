@@ -3,8 +3,8 @@
 # Source: https://github.com/Petsamuel/HandyMan-Backend
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from database import get_db
-from models import models, schemas
+from app.database import get_db
+from app.models import models, schemas
 
 
 router = APIRouter()

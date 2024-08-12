@@ -3,9 +3,9 @@
 # Source: https://github.com/Petsamuel/HandyMan-Backend
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from models import models, schemas
-from database import get_db
-from services import services
+from app.models import models, schemas
+from app.database import get_db
+from app.services import services
 from passlib.context import CryptContext
 from typing import List
 import logging
