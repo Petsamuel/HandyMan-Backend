@@ -14,11 +14,17 @@ if ENV == "production":
     POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
     POSTGRES_HOST = os.getenv("POSTGRES_HOST")
     POSTGRES_DATABASE = os.getenv("POSTGRES_DATABASE")
+    PORT =5432
     
-    DB_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:5432/{POSTGRES_DATABASE}"
+    DB_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{PORT}/{POSTGRES_DATABASE}"
 else:
     # Use SQLite for local development
-    DB_URL = os.getenv("SQLALCHEMY_DATABASE_URL")  # You can change the path as needed
+# DATABASE_URL=postgresql://postgres:root@localhost:5432/handyman
+#            postgresql://username:password@localhost:5432/dbname
+    # DB_URL ="postgresql://postgres:root@localhost:5432/handyman"
+    DB_URL ="sqlite:///./handyman.db"
+    # int(DB_URL)
+    # os.getenv("SQLALCHEMY_DATABASE_URL")  
 
 # Create a Database instance
 database = Database(DB_URL)
@@ -27,7 +33,7 @@ database = Database(DB_URL)
 metadata = MetaData()
 
 # Create SQLAlchemy engine
-engine = create_engine(DB_URL)
+engine = create_engine(DB_URL, connect_args={"check_same_thread":False})
 
 # Create a session local class
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
